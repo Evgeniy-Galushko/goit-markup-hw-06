@@ -56,13 +56,26 @@ img {
 
 .containers {
     display: flex;
-    
+    justify-content: space-between;
 }
 
 .container {
-    width: 1158px;
+    max-width: 320px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 16px;
+}
+
+@media screen and (min-width: 768px){
+    .container{
+        max-width: 768px;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .container {
+        max-width: 1158px;
+        padding: 0 15px;
+        }
 }
 
 .logo {
@@ -73,7 +86,7 @@ img {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #4d5ae5;
-    margin-right: 76px;
+    padding: 16px 0;
 }
 
 .part-logo {
@@ -81,22 +94,8 @@ img {
 }
 
 .navigation-list {
-    display: flex;
-    gap: 40px;
-}
-
-.navigation-menu {
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #2e2f42;
-    padding: 24px 0;
-    position: relative;
-    transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    display: none;
+    
 }
 
 .navigation-list .navigatio-studio{
@@ -104,7 +103,64 @@ img {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.navigation-list .navigatio-studio:after{
+
+.list-contacts {
+    display: none;
+} 
+
+
+.open-menu{
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    line-height: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .navigation-list{
+        display: flex;
+        gap: 40px;
+        padding: 24px 0;
+        margin-right: 119px;
+        }
+
+    .list-contacts{
+        display: block;
+        display: flex;
+        flex-direction: column;
+        padding-top: 16px;
+        }
+
+    .open-menu{
+        display: none;
+        }
+
+    .logo{
+        margin-right: 120px;
+        }
+    .navigation-menu {
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.17;
+        letter-spacing: 0.02em;
+        color: #2e2f42;
+        padding: 24px 0;
+        position: relative;
+        transition-property: background-color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    .navigation-menu:hover,
+    .navigation-menu:focus {
+            color: #404bbf;
+        }
+
+    .navigation-menu:active {
+            color: #404bbf;
+        }
+    .navigation-list .navigatio-studio:after {
         position: absolute;
         left: 0;
         right: 0;
@@ -114,44 +170,42 @@ img {
         border-radius: 2px;
         background-color: #404bbf;
         content: "";
+        }
+    .contacts {
+        font-weight: 400;
+        font-size: 12px;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: #434455;
+        transition-property: color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        font-family: "Roboto", sans-serif;
+        }
+
+    .contacts:hover,
+    .contacts:focus {
+        color: #404bbf;
+        }
 }
 
-.list-contacts {
-    width: 344px;
-    display: flex;
-    gap: 40px;
-    padding: 24px 0;
+@media screen and (min-width: 1158px) {
+    .logo {
+        margin-right: 76px;
+    }
+    .list-contacts {
+        flex-direction: row;
+        gap: 40px;
+        padding-top: 24px;
+        }
+    .contacts{
+        font-size: 16px;
+        line-height: 1.5;
+        }
 }
 
-.contacts {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    font-style: normal;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #434455;
-    padding: 24px 0;
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.contacts:hover,
-.contacts:focus {
-    color: #404bbf;
-}
-
-.navigation-menu:hover,
-.navigation-menu:focus {
-    color: #404bbf;
-}
-
-.navigation-menu:active {
-    color: #404bbf;
-}
-
-                    /*main*/
+                    /* main*/
 
                     /*Effective Solutions*/
 .solutions {
@@ -168,6 +222,12 @@ img {
     background-position: center center;
     max-width: 1440px;
     margin: 0 auto;
+}
+
+@media screen and (min-resolution: 192dpi){
+    .solutions{
+        background-image: url(../images/background@2x.jpg);
+    }
 }
 
 .effective-solutions {
@@ -212,7 +272,7 @@ img {
 
                     /*our qualities*/
 .qualities {
-    padding: 120px 0;
+    padding: 96px 0;
     display: flex;
 }
 
@@ -227,25 +287,27 @@ img {
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
-}/*скрывает текст*/
+}
 
 .list-qualities {
     display: flex;
-    gap: 24px;
+    flex-direction: column;
+    gap: 72px;
 
 }
 
 .list-qualities .title-qualities {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
     letter-spacing: 0.02em;
+    text-align: center;
     color: #2e2f42;
     margin-bottom: 8px;
 }
 
 .list-qualities .paragraph-qualities {
-    font-weight: 400;
+    font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -257,23 +319,17 @@ img {
 }
 
 .list-qualities .icon-advantages{
-    display: flex;
-    align-items: center;
+    display: none;
+    /* align-items: center;
     justify-content:center;
     height: 112px;
     background-color: #f4f4fd;
     border-radius: 4px;
     border: 1px solid #8e8f99;
-    margin-bottom: 8px;
-    /*width: 264px;
-    height: 112px;
-    background-color: #f4f4fd;
-    border: 1px solid #8e8f99;
-    border-radius: 4px;
-    padding: 24px 100px;*/
+    margin-bottom: 8px; */
 }
 
-                        /*Our Team*/
+                /*Our Team*/
 .team {
     padding: 120px 0;
     background-color: #f4f4fd;
@@ -293,6 +349,23 @@ img {
 .team-list {
     display: flex;
     gap: 24px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .team-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        }
+}
+
+@media screen and (min-width: 768px) {
+    .team-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .employees{
+        flex-basis: calc((100% - 24px) / 2);
+    }
 }
 
 .profession {
@@ -529,7 +602,6 @@ max-width: 208px;
 }
 
 .footer-email{
-    /* display: flex; */
     max-width: 453px;
     margin-left: 80px;
     
@@ -857,4 +929,6 @@ input::placeholder {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-                /* MODAL END */
+               /* MODAL END */
+
+                
