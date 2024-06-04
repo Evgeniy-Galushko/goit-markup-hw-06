@@ -329,6 +329,62 @@ img {
     margin-bottom: 8px; */
 }
 
+@media screen and (min-width: 768px) {
+    .list-qualities{
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+    .advantages{
+        flex-basis: calc((100% - 24px) /2 );
+    }
+    .list-qualities .title-qualities{
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 1158px){
+    .list-qualities .icon-advantages {
+        display: flex;
+        align-items: center; 
+        justify-content:center;
+        height: 112px;
+        background-color: #f4f4fd;
+        border-radius: 4px;
+        border: 1px solid #8e8f99;
+        margin-bottom: 8px;
+    }
+        .list-qualities .title-qualities {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 1.2;
+            letter-spacing: 0.02em;
+            text-align: left;
+            color: #2e2f42;
+            margin-bottom: 8px;
+        }
+    
+        .list-qualities .paragraph-qualities {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 0.02em;
+            color: #434455;
+        }
+        .list-qualities {
+            flex-direction: row;
+            gap: 24px;
+            justify-content: center;
+        }
+        .advantages {
+            align-items: center;
+            justify-content: center;
+            flex-basis: calc((100% - 24px) / 5);
+
+        }
+}
+
+
                 /*Our Team*/
 .team {
     padding: 120px 0;
