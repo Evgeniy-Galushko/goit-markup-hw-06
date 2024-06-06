@@ -325,7 +325,7 @@ img {
 
     .menu-social {
         display: flex;
-        gap: 24px;
+        gap: 40px;
         justify-content: center;
     }
 
