@@ -434,14 +434,14 @@ img {
                 rgba(46, 47, 66, 0.7)),
             url(../images/bg-tab.jpg);
             }
-    @media screen and (min-resolution: 192dpi) {
-        .solutions {
-            background-image: linear-gradient(to bottom,
-                    rgba(46, 47, 66, 0.7),
-                    rgba(46, 47, 66, 0.7)),
-                url(../images/bg-tab@2x.jpg);
-                }
+@media screen and (min-resolution: 192dpi) {
+    .solutions {
+        background-image: linear-gradient(to bottom,
+                rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(../images/bg-tab@2x.jpg);
             }
+        }
 }
 
 @media screen and (min-width: 1158px) {
@@ -454,12 +454,12 @@ img {
         }
         
     @media screen and (min-resolution: 192dpi) {
-        .solutions {
-            background-image: linear-gradient(to bottom,
-                    rgba(46, 47, 66, 0.7),
-                    rgba(46, 47, 66, 0.7)),
-                url(../images/bg-pc@2x.jpg);
-            }
+    .solutions {
+        background-image: linear-gradient(to bottom,
+                rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(../images/bg-pc@2x.jpg);
+        }
     }
 }
 
@@ -575,7 +575,7 @@ img {
 }
 
 
-/*---------------------------Our Team-------------------*/
+/*--------------Our Team-------------------*/
 .team {
     background-color: #f4f4fd;
     padding: 96px 0;
