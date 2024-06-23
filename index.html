@@ -5,7 +5,11 @@
     <meta name="description" content="Website development studio WebStudio">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebStudio</title>
-    <script src="./js/modal.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous">
+    </script>
+    <script src="./js/mobile-menu.js" type="module"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
         integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -33,15 +37,15 @@
                     <li><a href="tel:+110001111111" class="contacts">+11 (000) 111-11-11</a></li>
                 </ul>
             </address>
-            <button class="open-menu" type="button">
+            <button class="open-menu js-open-menu" type="button">
                 <svg class="open-menu-icon" width="24" height="24">
                     <use href="./images/icons.svg#icon-solid_menu"></use>
                 </svg>
             </button>
         </div>
-        <div  class="menu-overlay">
+        <div  class="menu-overlay js-menu-container">
             <div class="menu">
-                <button class="menu-button" type="button">
+                <button class="menu-button js-close-menu" type="button">
                     <svg class="icon-menu-button" width="8" height="8">
                         <use href="./images/icons.svg#icon-close-black"></use>
                     </svg>
@@ -49,8 +53,8 @@
                 <nav class="nav-menu">
                     <ul class="menu-navigation">
                         <li><a href="./index.html" class="menu-list menu-list-stud">Studio</a></li>
-                        <li><a href="" class="menu-list">Portfolio</a></li>
-                        <li><a href="" class="menu-list">Contacts</a></li>
+                        <li><a href="#portfolio" class="menu-list mobile-modal-link">Portfolio</a></li>
+                        <li><a href="#footer" class="menu-list mobile-modal-link">Contacts</a></li>
                     </ul>
                 </nav>
                 <address class="address-menu">
@@ -301,7 +305,7 @@
         </div>
     </section>
     <!--Our Portfolio-->
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
         <div class="container">
             <h2 class="title-portfolio">Our Portfolio</h2>
                 <ul class="list-portfolio">
@@ -417,7 +421,7 @@
         </div>
     </section>
     </main>
-    <footer class="footers">
+    <footer class="footers" id="footer">
         <div class="container container-footer">
             <div class="footer-div">
                 <div class="footers-logo">
